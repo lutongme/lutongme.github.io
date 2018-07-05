@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo从0开始（二） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#关于此文简介  hexo那些事本文讲解：hexo配置，hexo目录粗解">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo从0开始（二）">
+<meta property="og:url" content="http://lutongme.github.io/2018/07/05/buildhexo2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#关于此文简介  hexo那些事本文讲解：hexo配置，hexo目录粗解">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-05T15:17:22.345Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo从0开始（二）">
+<meta name="twitter:description" content="#关于此文简介  hexo那些事本文讲解：hexo配置，hexo目录粗解">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lutongme.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-buildhexo2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/05/buildhexo2/" class="article-date">
+  <time datetime="2018-07-05T14:30:00.000Z" itemprop="datePublished">2018-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo从0开始（二）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#关于此文简介</p>
+<p> hexo那些事<br>本文讲解：hexo配置，hexo目录粗解</p>
+<hr>
+<a id="more"></a>
+<p>###开整  </p>
+<p>####熟悉hexo目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml  //主配置文件</span><br><span class="line">├── package.json  //应用程序的信息</span><br><span class="line">├── scaffolds  //模板文件夹</span><br><span class="line">├── source  //存储用户数据的地方</span><br><span class="line">|   ├── _drafts  //草稿(没用过)</span><br><span class="line">|   └── _posts  //数据</span><br><span class="line">└── themes  //  主题数据</span><br></pre></td></tr></table></figure></p>
+<p>具体讲解：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration.html</a>  </p>
+<p>####熟悉hexo配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo  //网站标题</span><br><span class="line">subtitle:  //网站副标题</span><br><span class="line">description: //网站介绍</span><br><span class="line">keywords:  //网站关键词</span><br><span class="line">author: lutongme  //作者</span><br><span class="line">language: zh-Hans //语言</span><br><span class="line">timezone: 	Asia/Shanghai //时区</span><br><span class="line">//！！注意：&quot;:&quot;号后面有一个空格！！</span><br><span class="line">url: http://yoursite.com  //你的网站域名(网址)</span><br><span class="line"></span><br><span class="line">zh-Hans</span><br><span class="line"></span><br><span class="line">theme: landscape  /所选主题名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git //填git</span><br><span class="line">  repo: https://github.com/你的名字/你的名字.github.io.git  //SSH地址</span><br><span class="line">  branch: master  //分支</span><br></pre></td></tr></table></figure></p>
+<p>这些简单的调整后就可以使用了  </p>
+<p>####熟悉hexo常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清除缓存</span><br><span class="line">hexo generate  //创建缓存文件</span><br><span class="line">简写hexo g</span><br><span class="line">选项  描述</span><br><span class="line">-d, --deploy    文件生成后立即部署网站</span><br><span class="line">-w, --watch 监视文件变动</span><br><span class="line">&gt;hexo shexo server</span><br><span class="line"></span><br><span class="line">hexo server  //创建本地测试服务器</span><br><span class="line">简写hexo s</span><br><span class="line">选项  描述</span><br><span class="line">-p, --port  重设端口</span><br><span class="line">-s, --static    只使用静态文件</span><br><span class="line">-l, --log   启动日记记录，使用覆盖记录格式</span><br><span class="line"></span><br><span class="line">hexo deploy  //上传博客</span><br><span class="line">简写hexo d</span><br></pre></td></tr></table></figure>
+<p>总结一下，记上下边那些命令就行了</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>hexo s<br>hexo d</p>
+</blockquote>
+<p>无法上传的话请安装hexo-deployer：npm install hexo-deployer –save -git</p>
+<p>具体讲解请看hexo官方网站：hexo.io</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lutongme.github.io/2018/07/05/buildhexo2/" data-id="cjj8p5yhr0000iwjnq9wbuwmf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/05/buildhexo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo从0开始（一）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/05/buildhexo2/">Hexo从0开始（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/05/buildhexo1/">Hexo从0开始（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 lutongme<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
